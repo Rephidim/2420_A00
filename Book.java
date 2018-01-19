@@ -75,7 +75,7 @@ implements Comparable<Book>{
 	
 	// Tested getList() method
 //	public static void main(String[] args) {
-//		String file = "D:\\Java Dev\\Workspace\\books.csv";
+//		String file = "###";
 //		List<Book> books = getList(file);
 //		for(Book b : books) {
 //			System.out.println(b);
