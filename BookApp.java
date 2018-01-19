@@ -49,7 +49,7 @@ public class BookApp {
 	}
 	
 	public static void main(String[] args) {
-		String file = "D:\\Java Dev\\Workspace\\books.csv";
+		String file = "###";
 		List<Book> books = getList(file);
 		System.out.println("Number of books read in: " + count);
 		System.out.println();
