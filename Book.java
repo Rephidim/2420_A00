@@ -57,25 +57,19 @@ implements Comparable<Book>{
 	public String toString() {
 		return getTitle() + " by " + getAuthor() + " (" + getYear() + ")";
 	}
+	
+	public int compare(Book a, Book b) {
+		return (int) (a.getTitle().compareToIgnoreCase(b.getTitle()));
+	}
 
 	@Override
 	public int compareTo(Book b) {
-		int r = 0;
-		if (this.getAuthor().equals(b.getAuthor())) {
-			r = 0;
-		}
-		if (this.getAuthor().compareToIgnoreCase(b.getAuthor()) > 0) {
-			r = 1;
-		}
-		if (this.getAuthor().compareToIgnoreCase(b.getAuthor()) < 0) {
-			r = -1;
-		}
-		return r;
+		return compare(this,b);
 	}
 	
 	// Tested getList() method
 //	public static void main(String[] args) {
-//		String file = "###";
+//		String file = "D:\\Java Dev\\Workspace\\books.csv";
 //		List<Book> books = getList(file);
 //		for(Book b : books) {
 //			System.out.println(b);
