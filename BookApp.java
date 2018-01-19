@@ -48,8 +48,13 @@ public class BookApp {
 		return list;
 	}
 	
+	private static <T>List<T> reverse(List<T> list) {
+		Collections.reverse(list);
+		return list;
+	}
+	
 	public static void main(String[] args) {
-		String file = "###";
+		String file = "/Users/mori/Documents/CSIS2420/books.csv";
 		List<Book> books = getList(file);
 		System.out.println("Number of books read in: " + count);
 		System.out.println();
@@ -57,7 +62,12 @@ public class BookApp {
 		for(Book b : books) {
 			System.out.println(b);
 		}
-		
+		reverse(books);
+		System.out.println();
+		System.out.println("Reversed book list:");
+		for(Book b : books) {
+			System.out.println(b);
+		}
 	}
 	
 }
